@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nila Company</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+     <!--link untuk style css-->    
+    <link rel="stylesheet" href="style/style.css">
+    <!--link untuk karakter-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+    <style>
+      #waktu {
+          color: #82817f; /* Orange color */
+          font-size: 24px; /* Larger font size */
+          font-family: 'Times New Roman', Times, serif;          
+          position: absolute; /* Position absolute */
+          top: 50%; /* Position at 50% from the top */
+          left: 50%; /* Position at 50% from the left */
+          transform: translate(-50%, -50%); /* Translate to center */
+      }
+
+      /* style card */
+      .custom-card {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* Styling  accordion */
+        .custom-accordion .accordion-item {
+            width: 100%;
+        }
+        .custom-accordion .accordion-collapse {
+            padding: 10px;
+        }
+          /*style section tentang*/
+        .container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+        }
+
+        .text-container {
+          text-align: center;
+          margin-top: 20px; /* Jarak antara gambar dan teks */
+        }
+
+        .text-container p {
+          margin-bottom: 15px; /* Jarak antar paragraf */
+        }
+
+        .image-container {
+          margin-bottom: 20px; /* Jarak antara gambar dan teks */
+        }
+
+       
+  </style>
+</head>
+
+
+<body>      <!-- untuk Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-lg fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">NilaCompany</a>
+          <P id="waktu"></P>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse text-right" id="navbarText">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#layanan">Layanan</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#portofolio">Portofolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#tentang">Tentang</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#staff">Staff</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#kontak">Kontak Kami</a>
+              </li>
+            </ul>            
+          </div>
+        </div>
+      </nav>
+      
+    <!--untuk carosel-->
+      <div id="carouselExampleDark" class="carousel carousel-dark slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="https://eduparx.id/blog/wp-content/uploads/2023/07/sean-pollock-PhYq704ffdA-unsplash-scaled.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Selamat Datang di Website kamil</h5>
+              <p>Mudah</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="https://sman1pracimantoro.sch.id/asset/foto_berita/perus_it.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Selamat Datang di Website kami</h5>
+              <p>Terpercaya</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://qnp.co.id/wp-content/uploads/2022/04/unnamed.jpeg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Selamat Datang di Website kami</h5>
+              <p>Berkualitas</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+          
+      
+
+      <!--Layanan Section-->
+      <div class="container-fluid Layanan pt-5 pb-5">
+        <div class="container text-center">
+          <h2 class="display-3" id="layanan">Layanan</h2>
+          <p> Kami siap membantu Anda</p>
+          <div class="row pt-4">
+            <div class="col-md-4">
+              <span class="lingkaran"><i class="fa-solid fa-code fa-5x"></i></span>           
+              <h3 class="mt-3">Desaign</h3>
+              <p>Indah dan menyenangkan</p>
+            </div>
+
+            <div class="col-md-4">
+              <span class="lingkaran"><i class="fa-solid fa-code fa-5x"></i></span>           
+              <h3 class="mt-3">Jaringan</h3>
+              <p>Tak terbentang</p>
+            </div>
+
+            <div class="col-md-4">
+              <span class="lingkaran"><i class="fa-solid fa-code fa-5x"></i></span>           
+              <h3 class="mt-3">Programming</h3>
+              <p>Seni Diri</p>
+            </div>
+          </div> 
+        </div>
+      </div>
+
+      <!--Portofolio Section-->
+      <div class="container-fluid pt-5 bg-light">
+        <div class="container text-center">
+            <h2 class="display-3" id="portofolio">Portofolio</h2>
+            <p>kerja bagus</p>
+            <div class="row pt-4 gx-4 gy-4">
+                <div class="col-md-4">
+                    <div class="accordion accordion-flush" id="accordionExample">
+                        <div class="card">
+                            <img src="assets/prs.png" class="card-img-top" width="200" height="200">
+                            <div class="card-body">
+                                <h5 class="card-title">😮Histroy😮‍💨</h5>
+                                <p class="card-text"> Berdiri pada tahun ...</p>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" style="background-color: rgb(157, 156, 168);" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Selengkapnya
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <strong> 2029👉</strong> Perusahaan ini telah berdiri pada tahun 2029, yang terletak di London. Perusahaan ini dilatar belakangi oleh pengalamn pribadi, yang dimana kebingungan untuk menyalurkan bakat dan juga pengalaman yang telah dilalui agar bisa menginspirasi khalayak umum. <code>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="accordion accordion-flush" id="accordionExample2">
+                      <div class="card">
+                          <img src="assets/srt.jpg" class="card-img-top" width="200" height="200">
+                          <div class="card-body">
+                              <h5 class="card-title">Certificate🌏</h5>
+                              <p class="card-text">Akses ke jaringan profesional... </p>
+                              <div class="accordion-item">
+                                  <h2 class="accordion-header">
+                                      <button class="accordion-button collapsed" style="background-color: rgb(157, 156, 168);" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                          Selengkapnya
+                                      </button>
+                                  </h2>
+                                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample2">
+                                    <div class="accordion-body">
+                                        <strong>Sertifikasi Perusahaan.</strong> Dengan sertifikasi perusahaan kami, Anda akan mendapatkan akses ke jaringan profesional yang luas. Ini akan membuka peluang untuk berkolaborasi dengan para ahli dalam industri, memperluas jaringan kontak Anda, dan mendapatkan wawasan berharga tentang tren dan praktik terbaik.
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="accordion accordion-flush" id="accordionExample3">
+                    <div class="card">
+                        <img src="assets/unt.jpg" class="card-img-top" width="200" height="200">
+                        <div class="card-body">
+                            <h5 class="card-title">Investasi untuk Masa Depan💹</h5>
+                            <p class="card-text">Keuntungan mananti Anda... </p>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" style="background-color: rgb(157, 156, 168);" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Selengkapnya
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample3">
+                                    <div class="accordion-body">
+                                        <strong>Kesempatan dan Keuntungan.</strong> Perusahaan kami menawarkan kesempatan dan Keuntungan yang akan menanti Anda. Kami menawarkan lingkungan kerja yang dinamis, peluang karir yang menarik, serta program pengembangan diri yang komprehensif
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+        
+
+      <!--Tentang Section-->
+      <div class="container-fluid pt-5 pb-5">
+        <div class="container">
+          <h2 class="display-3 text-center" style="color: black;" id="tentang">Tentang</h2>
+          <p class="text-center" style="color: brown;"> Keunggulan Perusahaan Kami:</p>
+          <div class="clearfix pt-5">
+            <div class="image-container col-md-6 float-md-end mb-3 card-img-top">
+              <img src="assets/ttn.jpg" width="500" height="300" alt="Tentang Kami">
+            </div>
+            <div class="text-container col-md-6">
+              <p>Inovasi Terdepan 👉 Kami terus mendorong batas-batas teknologi dan menciptakan solusi yang mengubah industri.</p>
+              <p>Pertumbuhan Karir yang Pesat 👉 Kami menyediakan program pengembangan karir yang komprehensif dan kesempatan untuk berkembang bersama perusahaan.</p>
+              <p>Komitmen pada Kualitas👉 Kami berkomitmen untuk memberikan produk dan layanan berkualitas tinggi kepada pelanggan kami.</p>
+            </div>
+          </div>
+        </div>
+    </div>
+
+      <!--Staff Section-->
+      <div class="container-fluid pt-5 pb-5 bg-light">
+        <div class="container text-center">
+          <h2 class="display-3" id="staff"> Our Team</h2>
+          <p>Tim kami bekerja sesuai dengan bidangnya masing-masing</p>
+          <div class="row pt-4 gx-4 gy-4">
+            <div class="col-md-4 text-center tim">
+              <img src="assets/o1.jpg" class="rounded-circle mb-3" />
+              <h4>Nathan</h4>
+              <p>Programmer</p>           
+            </div>
+
+            <div class="col-md-4 text-center tim">
+              <img src="assets/o2.jpg" class="rounded-circle mb-3" />
+              <h4>Jenner</h4>
+              <p>Designer</p>           
+            </div>
+
+            <div class="col-md-4 text-center tim">
+              <img src="assets/o3.jpg" class="rounded-circle mb-3" />
+              <h4>Leysya</h4>
+              <p>Developer</p>           
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Kontak Section-->
+      <div class="container-fluid pt-5 pb-5 kontak bg-white">
+        <div class="container">
+          <h2 class="display-3 text-center" id="kontak">Kontak Kami</h2>
+          <p class="text-center">Siap melayani Anda</p>
+          <div class="row pb-3">
+            <div class="col-md-6 mx-auto">
+              <input class="form-control form-control-lg mb-3" type="text" placeholder="Nama">
+              <input class="form-control form-control-lg mb-3" type="text" placeholder="Email">              
+            </div>
+          </div>
+          <div class="col-md-3 mx-auto text-center">
+            <button type="button" class="btn-btn-danger btn-lg"> Kirim</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Section -->
+    <footer id="footer" class="mt-5 bg-dark text-white">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-6">
+                  <h3 class="mb-4">NACWInspiration</h3>
+                  <p>Terpercaya dan Berkualitas</p>
+              </div>
+              <div class="col-md-6">
+                  <h3 class="mb-4">Social</h3>
+                  <p><b>Instagram:</b> nilaayucitrawulan3450</p>
+              </div>
+          </div>
+      </div>
+  </footer>
+
+     <!--js waktu-->
+  <script>
+    function updateDateTime() {
+      const date = new Date();
+      const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: false };
+      const formattedDate = date.toLocaleDateString('en-US', options);
+      document.getElementById("waktu").innerHTML = `<p>🗓️${formattedDate}🕝</p>`;
+    }
+
+    setInterval(updateDateTime, 1000);
+
+    updateDateTime();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+</body>
+</html>
